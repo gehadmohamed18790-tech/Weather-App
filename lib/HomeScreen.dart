@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   String _getDayName(DateTime date) {
-    return DateFormat('EEE').format(date); // Sun, Mon, Tue...
+    return DateFormat('EEE').format(date); 
   }
 
   @override
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ? Center(child: Text(provider.error, style: const TextStyle(color: Colors.white, fontSize: 18)))
                   : Stack(
                       children: [
-                        // خلفية متحركة
+                        
                         AnimatedSwitcher(
                           duration: const Duration(milliseconds: 1200),
                           child: Container(
@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: SingleChildScrollView(
                             child: Column(
                               children: [
-                                // شريط البحث
+                                
                                 Padding(
                                   padding: const EdgeInsets.all(20),
                                   child: Row(
@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                   const SizedBox(height: 30),
 
-                                  // Feels like + Humidity
+                                  
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -127,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                   const SizedBox(height: 40),
 
-                                  // 5-Day Forecast
+                                  
                                   const Padding(
                                     padding: EdgeInsets.symmetric(horizontal: 20),
                                     child: Align(
