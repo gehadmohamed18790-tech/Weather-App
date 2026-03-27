@@ -6,8 +6,8 @@ class WeatherModel {
   final double tempMax;
   final String description;
   final String icon;
-  final String main;        // Clear, Clouds, Rain, Snow ...
-  final bool isDay;         // true = نهار، false = ليل
+  final String main;        
+  final bool isDay;         
 
   WeatherModel({
     required this.cityName,
@@ -25,7 +25,7 @@ class WeatherModel {
     final iconCode = json['weather'][0]['icon'] as String;
     final weatherMain = json['weather'][0]['main'] as String;
 
-    // تحديد النهار أو الليل من آخر حرف في الـ icon (d = day, n = night)
+    
     final isDayTime = iconCode.endsWith('d');
 
     return WeatherModel(
