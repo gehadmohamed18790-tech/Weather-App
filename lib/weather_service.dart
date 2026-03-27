@@ -35,7 +35,7 @@ class WeatherService {
     final List<dynamic> list = response.data['list'];
     List<ForecastModel> forecasts = [];
 
-    // نأخذ توقع واحد لكل يوم (كل 24 ساعة)
+    
     for (int i = 0; i < list.length && forecasts.length < 5; i += 8) {
       forecasts.add(ForecastModel.fromJson(list[i]));
     }
